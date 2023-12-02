@@ -9,10 +9,10 @@ RSpec.describe Like, type: :model do
   describe '#update_likes_count_on_create' do
     it 'updates the likes count on create' do
       user1 = User.create(name: 'John Doe')
-      post1 = Post.create(author: user, title: 'New post')
+      post1 = Post.create(author: user1, title: 'New post')
       expect do
         Like.create(user: user1, post: post1)
-      end.to change { post.likes_counter }.by(1)
+      end.to change { post1.likes_counter }.by(1)
     end
   end
 end

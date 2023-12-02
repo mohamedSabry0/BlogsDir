@@ -17,12 +17,12 @@ RSpec.describe Post, type: :model do
   describe '#five_most_recent_comments' do
     it 'returns the five most recent comments for the post' do
       user1 = User.create(name: 'John Doe')
-      post1 = Post.create(author: user, title: 'New post')
+      post1 = Post.create(author: user1, title: 'New post')
       comments = []
       10.times do |i|
         comments.push(Comment.create!(user: user1, post: post1, text: "Comment #{i}"))
       end
-      expect(post.five_most_recent_comments).to eq(comments.last(5).reverse)
+      expect(post1.five_most_recent_comments).to eq(comments.last(5).reverse)
     end
   end
 
