@@ -1,3 +1,13 @@
-<ul>
-  <h2>Here is a list of all users:</h2>
-</ul>
+<% @users.each do |user| %>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <%= image_tag user.photo, class: "card-img-top" %>
+                <div class="card-body">
+                    <h5 class="card-title"><%= user.name %></h5>
+                    <p class="card-text">Number of Posts: <%= user.posts.count %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
