@@ -9,6 +9,8 @@ class Post < ApplicationRecord
 
   after_create :update_posts_count_on_create
 
+  self.per_page = 2
+
   def five_most_recent_comments
     comments.order(created_at: :desc).limit(5)
   end
