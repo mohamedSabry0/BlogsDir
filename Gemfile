@@ -77,4 +77,5 @@ group :test do
 end
 gem 'rubocop', '>= 1.0', '< 2.0'
 
-gem "cssbundling-rails", "~> 1.3"
+gem 'cssbundling-rails', '~> 1.3'
+gem 'will_paginate', '~> 3.3'

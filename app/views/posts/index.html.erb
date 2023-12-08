@@ -1,3 +1,8 @@
-<ul>
-  <h2>Here is a list of all posts of a given user:</h2>
-</ul>
+<section class="d-flex flex-column p-3">
+    <%= render partial: 'users/user', object: @posts[0].author, link: true %>
+
+    <%= render partial: 'post', collection: @posts, locals: {comments: true, link: true, truncate: true, author: @posts[0].author} %>
+    <section class="align-self-center w-50">
+        <%= will_paginate @posts %>
+    </section>
+</section>

@@ -1,0 +1,9 @@
+
+<ul class="m-0 list-group">
+    <% comments.each do |comment| %>
+        <li class="list-group-item">
+            <strong><%= comment.user.name %>: </strong>
+            <%= comment.text %>
+        </li>
+    <% end %>
+</ul>

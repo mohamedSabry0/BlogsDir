@@ -1,1 +1,1 @@
-<h2>Here is a post page by a given user:</h2>
+<%= render partial: 'post', object: @post, locals: {comments: true, link: false, truncate: false, author: @post.author} %>
