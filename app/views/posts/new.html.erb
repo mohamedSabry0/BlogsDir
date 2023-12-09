@@ -1,0 +1,15 @@
+<%= form_with(model: @post, url: user_posts_path, class:"py-3") do |form| %>
+    <div class="field mb-3">
+        <%= form.label :post_title, class:"form-label" %>
+        <%= form.text_field :title, class:"form-control" %>
+    </div>
+
+    <div class="field, mb-3">
+        <%= form.label :post_text, class:"form-label" %>
+        <%= form.text_area :text, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit class:"btn btn-primary" %>
+    </div>
+<% end %>

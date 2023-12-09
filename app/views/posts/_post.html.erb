@@ -9,7 +9,7 @@
                     <% if truncate %>
                     <p><%= truncate post.text %></p>
                     <% else %>
-                    <p><%= simple_format post.text %></p>
+                    <p><%= post.text %></p>
                     <% end %>
                     <p class="card-text text-end">Comments: <%= post.comments_counter %></p>
                     <p class="card-text text-end">Likes: <%= post.likes_counter %></p>
