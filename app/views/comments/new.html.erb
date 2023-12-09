@@ -1,0 +1,10 @@
+<%= form_with(model: @comment, url: comments_path(post_id: @post.id), class:"py-3") do |form| %>
+    <div class="field, mb-3">
+        <%= form.label :comment_text, class:"form-label" %>
+        <%= form.text_area :text, class:"form-control" %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit class:"btn btn-primary" %>
+    </div>
+<% end %>
