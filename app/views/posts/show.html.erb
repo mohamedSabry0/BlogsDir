@@ -1,1 +1,6 @@
 <%= render partial: 'post', object: @post, locals: {comments: true, link: false, truncate: false, author: @post.author} %>
+
+<section class="d-flex pt-2">
+    <%= button_to 'Like this post!', likes_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
+    <%= link_to 'New Comment', new_comment_path(post_id: @post.id), class: 'btn btn-primary mx-3' %>
+</section>

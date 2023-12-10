@@ -156,7 +156,9 @@ If you like this project, please let me know and we can improve it further. You 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Acknowledgements and suggestions for improvement are always welcome
+- [Microverse](https://www.microverse.org/)
+- [Rails Guides](https://guides.rubyonrails.org/)
+- [this stackoverflow post](https://stackoverflow.com/questions/5985761/how-to-call-applicationcontroller-methods-from-applicationhelper)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
