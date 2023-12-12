@@ -1,17 +1,20 @@
-<% if local_assigns[:link] %>
-    <a href=<%= user_path(user) %>>
-<% end %>
-    <div class="card pr-2 my-3">
-        <div class="row">
-            <div class="col-md-1">
-                <%= image_tag user.photo, class: "img-fluid rounded-start" %>
-            </div>
-            <div class="col-md">
-                <div class="card-body justify-content-between">
-                    <h5 class="card-title"><%= user.name %></h5>
-                    <p class="card-text text-end">Number of Posts: <%= user.posts_counter %></p>
-                </div>
+<div class="card pr-2 my-3">
+    <div class="row">
+        <div class="col-md-1">
+            <%= image_tag user.photo, class: "img-fluid rounded-start" %>
+        </div>
+        <div class="col-md">
+            <div class="card-body justify-content-between">
+
+                <h5 class="card-title">
+                    <% if local_assigns[:link] %>
+                        <%= link_to user.name, user_path(user) %>
+                    <% else %>
+                        <%= user.name %>
+                    <% end %>
+                </h5>
+                <p class="card-text text-end">Number of Posts: <%= user.posts_counter %></p>
             </div>
         </div>
     </div>
-</a>
+</div>

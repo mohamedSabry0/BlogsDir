@@ -74,7 +74,7 @@ Blog app was built with Ruby on Rails. It is a simple blog app that allows users
 Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/mohamedSabry0/blog-app.git
+git clone https://github.com/mohamedSabry0/blogsDir.git
 ```
 
 ### Prerequisites
@@ -89,17 +89,26 @@ In order to run this project you need:
 Clone this repository to your dist folder:
 
 ```
-git clone https://github.com/mohamedSabry0/blog-app.git
+git clone https://github.com/mohamedSabry0/blogsDir.git
+```
 
-cd blog-app
+```
+
+cd blogsDir
+
 ```
 
 ### Install
 
 Install this project with:
-bundle install
 
-rails s
+```
+
+bundle install
+rails db:create
+rails db:migrate
+
+```
 
 ### Usage
 
@@ -107,7 +116,11 @@ Use this project in the browsers of desktops and mobile devices
 
 ### Run tests
 
-rails test
+Run the tests with:
+
+```
+rspec --format doc
+```
 
 ### Deployment
 
@@ -167,3 +180,4 @@ If you like this project, please let me know and we can improve it further. You 
 This project is [MIT](https://github.com/mohamedSabry0/blog-app/blob/data-model/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+```

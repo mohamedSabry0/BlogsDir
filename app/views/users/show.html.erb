@@ -4,7 +4,7 @@
     <div class="card mt-n1 px-2 py-1">
         <p><%= @user.bio %></p>
     </div>
-    <%= render partial:'posts/post', collection: @user.three_most_recent_posts, locals: {comments: false, link: true, truncate: true, author: @user} %>
+    <%= render partial:'posts/post', collection: @user.three_most_recent_posts, locals: {comments: false, truncate: true, author: @user} %>
 
 
     <%= link_to "See all posts", user_posts_path(@user), class: "btn btn-primary align-self-center" %>

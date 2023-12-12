@@ -1,23 +1,22 @@
-<% if link %>
-    <a href=<%= user_post_path(author, post) %>>
-<% end %>
-    <div class="card pr-2 my-3">
-        <div class="row">
-            <div class="col-md">
-                <div class="card-body justify-content-between">
-                    <h5 class="card-title"><%= post.title %></h5>
-                    <% if truncate %>
-                    <p><%= truncate post.text %></p>
-                    <% else %>
-                    <p><%= post.text %></p>
-                    <% end %>
-                    <p class="card-text text-end">Comments: <%= post.comments_counter %></p>
-                    <p class="card-text text-end">Likes: <%= post.likes_counter %></p>
-                </div>
+
+<div class="card pr-2 my-3">
+    <div class="row">
+        <div class="col-md">
+            <div class="card-body justify-content-between">
+                <% if truncate %>
+                <h5 class="card-title"><%= link_to post.title, user_post_path(author, post) %></h5>
+                <p><%= truncate post.text %></p>
+                <% else %>
+                <h5 class="card-title"><%=  post.title %></h5>
+                <p><%= post.text %></p>
+                <% end %>
+                <p class="card-text text-end">Comments: <%= post.comments_counter %></p>
+                <p class="card-text text-end">Likes: <%= post.likes_counter %></p>
             </div>
         </div>
     </div>
-</a>
+</div>
+
 <%if post.comments.empty? %>
     <p class="text-center">No comments yet</p>
 <% elsif truncate && comments %>
