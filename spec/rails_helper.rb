@@ -6,7 +6,7 @@ require_relative '../config/environment'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'capybara/rails'
-## require_relative 'support/database_cleaner'
+require_relative 'support/database_cleaner'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -70,4 +70,6 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
-Capybara.default_driver = :selenium_chrome
+
+# uncomment next line to view tests in browser
+# Capybara.default_driver = :selenium

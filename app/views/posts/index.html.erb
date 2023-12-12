@@ -1,7 +1,7 @@
 <section class="d-flex flex-column mx-3">
     <%= render partial: 'users/user', object: @user, link: true %>
 
-    <%= render partial: 'post', collection: @posts, locals: {comments: true, link: true, truncate: true, author: @user} %>
+    <%= render partial: 'post', collection: @posts, locals: {comments: true, truncate: true, author: @user} %>
     <section class="align-self-center w-50">
         <%= will_paginate @posts %>
     </section>

@@ -1,4 +1,4 @@
-<%= render partial: 'post', object: @post, locals: {comments: true, link: false, truncate: false, author: @post.author} %>
+<%= render partial: 'post', object: @post, locals: {comments: true, truncate: false, author: @post.author} %>
 
 <section class="d-flex pt-2">
     <%= button_to 'Like this post!', likes_path(post_id: @post.id), method: :post, class: 'btn btn-primary' %>
