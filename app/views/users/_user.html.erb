@@ -1,7 +1,7 @@
 <div class="card pr-2 my-3">
     <div class="row">
         <div class="col-md-1">
-            <%= image_tag user.photo, class: "img-fluid rounded-start" %>
+            <%= image_tag user.photo, class: "img-fluid rounded-start" if user.photo%>
         </div>
         <div class="col-md">
             <div class="card-body justify-content-between">

@@ -1,6 +1,7 @@
 <section class="d-flex flex-column">
 
     <%= render @user %>
+     <%= link_to "Edit profile", edit_registration_path(@user), class: "btn btn-primary" %>
     <div class="card mt-n1 px-2 py-1">
         <p><%= @user.bio %></p>
     </div>
